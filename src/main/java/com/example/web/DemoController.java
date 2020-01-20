@@ -15,7 +15,7 @@ public class DemoController {
     @ResponseBody
     public Map<String,Object> test(){
         Map<String,Object> map = new HashMap<>();
-        map.put("result","success");
+        map.put("result","succjenkins");
         return map;
     }
 }
