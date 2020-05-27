@@ -1,0 +1,34 @@
+#spring:
+#  kafka:
+#    bootstrap-servers: 192.168.0.100:9092 #指定kafka server的地址，集群配多个，中间，逗号隔开
+#    producer:
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#    consumer:
+#      group-id: test-consumer-group #群组ID
+#      enable-auto-commit: true
+#      auto-commit-interval: 1000
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+logging:
+  config: classpath:logback-spring.xml
+  path: /Users/admin/Downloads/log
+redis:
+  host: '10.0.0.110'
+  port: '6379'
+  password: ''
+  database: 3
+spring:
+  rabbitmq:
+    host: 10.0.60.64
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: '/jijiaopre'
+pay:
+  url: https://101.231.206.170:443/PGWPortal/B2CMobileRecvOrder.do
+  signKeyFile: /Users/admin/Downloads/jar/test.pfx
+  signKeyPasswd: 11111111
+  verifyCerFile: /Users/admin/Downloads/jar/bocnetca.cer
+server:
+  port: 8500
